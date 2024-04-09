@@ -1,6 +1,12 @@
 const text = "AI is in control now. Don't be scared.";
 const textBox = document.getElementById('text-box');
 const robot = document.getElementById('robot');
+const audio = document.getElementById('audio');
+
+document.addEventListener('click', () => {
+  audio.play();
+  document.removeEventListener('click', arguments.callee);
+});
 
 let i = 0;
 function typeWriter() {
